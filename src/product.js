@@ -38,8 +38,6 @@ const getProducts = async (req, res) => {
 
     res.json({ products: transformedResults });
   });
-
-  // res.json({ products: response });
 };
 
 module.exports = {
