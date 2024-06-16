@@ -25,6 +25,7 @@ const storeProducts = async (req, res) => {
 
 const getProducts = async (req, res) => {
   const query = "SELECT * FROM products";
+  await db.execute("DELETE FROM products");
   db.execute(query, (err, results) => {
     if (err) {
       console.error("Error fetching products:", err);
